@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
-import { ABOUT } from "@/lib/data";
+import { Sparkles, ArrowUpRight } from "lucide-react";
+import { ABOUT, SITE } from "@/lib/data";
 import { Tag } from "@/components/ui/Tag";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FadeIn, staggerContainer, staggerItem } from "@/components/FadeIn";
@@ -112,6 +112,16 @@ function SabiFlowCard() {
             <p className="mt-1 text-sm text-text-primary">2024</p>
           </div>
         </div>
+
+        <a
+          href={SITE.sabiflow}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-wider text-amber transition-colors hover:text-amber-dark"
+        >
+          Visit sabiflow.dev
+          <ArrowUpRight size={14} />
+        </a>
       </div>
     </div>
   );

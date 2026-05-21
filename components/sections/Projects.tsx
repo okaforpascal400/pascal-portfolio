@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight, Github, Lock } from "lucide-react";
 import { PROJECTS, type Project } from "@/lib/data";
 import { Badge } from "@/components/ui/Badge";
 import { Tag } from "@/components/ui/Tag";
@@ -70,9 +70,15 @@ function ProjectCard({ project }: { project: Project }) {
         ))}
       </div>
 
-      {project.links && project.links.length > 0 && (
+      {(project.links?.length || project.privateDeployment) && (
         <div className="relative mt-6 flex items-center gap-4 border-t border-border pt-5">
-          {project.links.map((link) => {
+          {project.privateDeployment && (
+            <span className="inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-wider text-text-muted">
+              <Lock size={14} />
+              Private Deployment
+            </span>
+          )}
+          {project.links?.map((link) => {
             const isGithub = link.label.toLowerCase().includes("github");
             const Icon = isGithub ? Github : ArrowUpRight;
             return (

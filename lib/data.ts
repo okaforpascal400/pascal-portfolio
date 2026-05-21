@@ -9,6 +9,7 @@ export const SITE = {
   email: "okaforpascal40@gmail.com",
   phone: "+234 803 387 8681",
   location: "Abuja, Nigeria",
+  sabiflow: "https://sabiflow.dev",
   social: {
     linkedin: "https://www.linkedin.com/in/pascal-okafor",
     github: "https://github.com/okaforpascal40",
@@ -77,6 +78,7 @@ export type Project = {
   stack: string[];
   links?: { label: string; href: string }[];
   featured?: boolean;
+  privateDeployment?: boolean;
 };
 
 export const PROJECTS: Project[] = [
@@ -117,7 +119,6 @@ export const PROJECTS: Project[] = [
     description:
       "Real-time voice and camera AI assistant that explains contracts, detects dangerous clauses, and answers legal questions across multiple countries and languages — Igbo, Hausa, Yoruba, Pidgin, French, English.",
     stack: ["Gemini 2.5 Flash", "FastAPI", "Google Cloud Run"],
-    links: [{ label: "Live", href: "https://legalsight.app" }],
   },
   {
     name: "RigAI — Oil & Gas Report Automation",
@@ -146,6 +147,7 @@ export const PROJECTS: Project[] = [
       "WhatsApp Cloud API",
       "LangChain",
     ],
+    privateDeployment: true,
   },
   {
     name: "NatureWellness — Biomedical Research Platform",
@@ -160,6 +162,7 @@ export const PROJECTS: Project[] = [
     description:
       "Production Retrieval-Augmented Generation pipeline that reduced client customer support tickets by 40% in the first month. Ingests knowledge base, converts to vector embeddings, retrieves context, generates accurate responses.",
     stack: ["LangChain", "Pinecone", "pgvector", "FastAPI"],
+    privateDeployment: true,
   },
   {
     name: "Hanify Solutions — AI Products (Australia)",
@@ -167,6 +170,7 @@ export const PROJECTS: Project[] = [
     description:
       "Technical partnership as CTO building AI automation products for Australian SMBs. Active projects include PlayUp (sports matchmaking) and ProduceMart SMS automation for Nigeria and South Africa.",
     stack: ["Next.js", "Python", "AI APIs", "SMS Automation"],
+    links: [{ label: "Live", href: "https://hanifysolutions.com.au" }],
   },
 ];
 
