@@ -27,14 +27,14 @@ export function AITwin() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="relative overflow-hidden rounded-xl border border-border bg-surface"
+          className="relative mx-auto max-w-3xl overflow-hidden rounded-xl border border-border bg-background shadow-amber-glow"
         >
           <iframe
             src="https://okafor-digital-twin.onrender.com"
             title="Okafor Pascal — AI Twin"
             loading="eager"
             allow="microphone; clipboard-write"
-            className="block h-[600px] w-full border-0 sm:h-[700px]"
+            className="block h-[500px] w-full border-0 sm:h-[520px]"
           />
         </motion.div>
 
