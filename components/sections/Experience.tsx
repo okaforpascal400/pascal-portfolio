@@ -9,8 +9,9 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="relative scroll-mt-24 border-t border-border py-24 lg:py-32"
+      className="relative scroll-mt-24 py-28 lg:py-32"
     >
+      <div aria-hidden className="divider-amber absolute inset-x-0 top-0" />
       <div className="container-page">
         <SectionHeader
           eyebrow="Career"
@@ -27,36 +28,33 @@ export function Experience() {
         >
           <div
             aria-hidden
-            className="absolute left-[7px] top-2 bottom-2 w-px bg-gradient-to-b from-amber/60 via-border to-transparent md:left-[11px]"
+            className="absolute left-[5px] top-2 bottom-2 w-px bg-border md:left-[7px]"
           />
 
           {EXPERIENCE.map((item) => (
             <motion.li
               key={`${item.company}-${item.role}`}
               variants={staggerItem}
-              className="relative pl-10 pb-12 last:pb-0 md:pl-14"
+              className="relative pl-10 pb-12 last:pb-0 md:pl-12"
             >
               <span
                 aria-hidden
-                className="absolute left-0 top-1.5 flex h-4 w-4 items-center justify-center md:h-6 md:w-6"
-              >
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber/40 opacity-50" />
-                <span className="relative inline-flex h-3 w-3 rounded-full bg-amber ring-4 ring-background md:h-3.5 md:w-3.5" />
-              </span>
+                className="absolute left-0 top-2 inline-flex h-2.5 w-2.5 rounded-full bg-amber ring-4 ring-background md:h-3 md:w-3"
+              />
 
               <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
                 <div>
-                  <h3 className="text-lg font-semibold tracking-tight text-text-primary sm:text-xl">
-                    {item.role}
-                  </h3>
-                  <p className="mt-1 text-sm text-amber">
+                  <h3 className="text-lg font-bold tracking-tight text-text-primary sm:text-xl">
                     {item.company}
                     {item.location && (
-                      <span className="text-text-muted">
+                      <span className="text-text-muted font-normal">
                         {" · "}
                         {item.location}
                       </span>
                     )}
+                  </h3>
+                  <p className="mt-1 text-sm font-medium text-amber">
+                    {item.role}
                   </p>
                 </div>
                 <p className="font-mono text-xs uppercase tracking-wider text-text-muted">
@@ -69,7 +67,7 @@ export function Experience() {
                   <li key={i} className="flex gap-3">
                     <span
                       aria-hidden
-                      className="mt-2 inline-block h-1 w-1 shrink-0 rounded-full bg-amber/60"
+                      className="mt-2.5 inline-block h-1 w-1 shrink-0 rounded-full bg-border-hover"
                     />
                     <span>{b}</span>
                   </li>

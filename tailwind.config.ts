@@ -9,11 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#080808",
-        surface: "#111111",
-        "surface-elevated": "#161616",
-        border: "#1f1f1f",
-        "border-hover": "#2a2a2a",
+        background: "#0f0f13",
+        "background-alt": "#13131a",
+        surface: "#1a1a24",
+        "surface-elevated": "#1f1f28",
+        border: "#2a2a3a",
+        "border-hover": "#3a3a4a",
         amber: {
           DEFAULT: "#f59e0b",
           dark: "#d97706",
@@ -21,8 +22,8 @@ const config: Config = {
         },
         text: {
           primary: "#f5f5f5",
-          secondary: "#a3a3a3",
-          muted: "#525252",
+          secondary: "#8b8b9e",
+          muted: "#6b7280",
         },
       },
       fontFamily: {
@@ -59,10 +60,9 @@ const config: Config = {
           "radial-gradient(circle at center, rgba(245, 158, 11, 0.15) 0%, transparent 70%)",
       },
       boxShadow: {
-        "amber-glow": "0 0 30px rgba(245, 158, 11, 0.15)",
-        "amber-glow-lg": "0 0 60px rgba(245, 158, 11, 0.25)",
-        "card-hover":
-          "0 0 0 1px rgba(245, 158, 11, 0.4), 0 8px 30px rgba(245, 158, 11, 0.1)",
+        "amber-glow": "0 0 24px rgba(245, 158, 11, 0.12)",
+        "amber-glow-lg": "0 0 40px rgba(245, 158, 11, 0.18)",
+        "card-hover": "0 0 0 1px rgba(245, 158, 11, 0.4)",
       },
     },
   },

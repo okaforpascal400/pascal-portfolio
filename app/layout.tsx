@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Image from "next/image";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { SITE } from "@/lib/data";
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   keywords: [
+    "Okafor Ogbonna Pascal",
     "Pascal Okafor",
     "Ogbonna Pascal Okafor",
     "Agentic AI Engineer",
@@ -70,7 +72,19 @@ export default function RootLayout({
       className={`${GeistSans.variable} ${GeistMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="font-sans">{children}</body>
+      <body className="relative font-sans">
+        <Image
+          src="/pascal.png"
+          alt=""
+          width={600}
+          height={600}
+          priority
+          unoptimized
+          aria-hidden
+          className="pointer-events-none fixed left-1/2 top-1/2 z-0 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 object-cover object-top opacity-[0.12]"
+        />
+        {children}
+      </body>
     </html>
   );
 }

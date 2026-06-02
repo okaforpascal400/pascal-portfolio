@@ -7,7 +7,8 @@ import { staggerContainer, staggerItem } from "@/components/FadeIn";
 
 export function Certifications() {
   return (
-    <section className="relative border-t border-border py-20 lg:py-24">
+    <section className="relative py-24 lg:py-28">
+      <div aria-hidden className="divider-amber absolute inset-x-0 top-0" />
       <div className="container-page">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
@@ -30,11 +31,11 @@ export function Certifications() {
             <motion.div
               key={cert.name}
               variants={staggerItem}
-              className="group relative overflow-hidden rounded-xl border border-border bg-surface p-5 transition-all duration-500 hover:border-amber/40 hover:shadow-amber-glow"
+              className="group relative rounded-xl border border-border bg-surface p-5 transition-all duration-300 hover:-translate-y-[3px] hover:border-amber/40"
             >
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber/10 ring-1 ring-amber/30 transition-all duration-500 group-hover:bg-amber/20">
-                  <Award className="h-5 w-5 text-amber" />
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-elevated">
+                  <Award className="h-4 w-4 text-amber" />
                 </div>
                 <div className="min-w-0">
                   <p className="truncate text-sm font-semibold text-text-primary">

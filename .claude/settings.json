@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -nE \"var\\\\\\(--blue|var\\\\\\(--purple|var\\\\\\(--yellow|var\\\\\\(--role|#[0-9a-fA-F]{3,8}|rgba?\\\\\\(\" c:/Users/okafo/avatar/frontend/src/visitor.ts c:/Users/okafo/avatar/frontend/src/theme.ts)",
+      "Bash(grep -nE \"var\\\\\\(--|#[0-9a-fA-F]{3,8}|rgba?\\\\\\(\" c:/Users/okafo/avatar/frontend/src/visitor.ts c:/Users/okafo/avatar/frontend/src/theme.ts)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\okafo\\avatar\\frontend\\src"
+    ]
+  }
+}

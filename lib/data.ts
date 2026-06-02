@@ -1,8 +1,8 @@
 export const SITE = {
-  name: "Pascal Okafor",
-  fullName: "Ogbonna Pascal Okafor",
+  name: "Okafor Ogbonna Pascal",
+  fullName: "Okafor Ogbonna Pascal",
   role: "Agentic AI Engineer",
-  title: "Pascal Okafor — Agentic AI Engineer & Founder",
+  title: "Okafor Ogbonna Pascal — Agentic AI Engineer & Founder",
   description:
     "Agentic AI Engineer. Founder of SabiFlow Technologies. CTO at Hanify Solutions. Building multi-agent LLM systems, enterprise RAG, and end-to-end AI automation at scale.",
   url: "https://pascalokafor.dev",
@@ -30,7 +30,7 @@ export const HERO = {
   headlineTop: "Building AI Systems",
   headlineBottom: "That Actually Ship.",
   subheadline:
-    "Founder of SabiFlow Technologies. I architect multi-agent LLM pipelines, enterprise RAG systems, and end-to-end AI automation platforms — handling 500K+ autonomous actions per month across healthcare, legal, compliance, and commerce.",
+    "I'm Okafor Ogbonna Pascal — founder of SabiFlow Technologies. I architect multi-agent LLM pipelines, enterprise RAG systems, and end-to-end AI automation platforms — handling 500K+ autonomous actions per month across healthcare, legal, compliance, and commerce.",
   stats: [
     { value: 500000, suffix: "+", label: "Autonomous Actions/Month", format: "compact" as const },
     { value: 11, suffix: "+", label: "Production AI Systems" },
@@ -41,7 +41,7 @@ export const HERO = {
 
 export const ABOUT = {
   paragraphs: [
-    "I'm Pascal — an Agentic AI Engineer and founder based in Abuja, Nigeria. I don't just integrate AI; I architect systems that operate autonomously at scale.",
+    "I'm Okafor Ogbonna Pascal — an Agentic AI Engineer and founder based in Abuja, Nigeria. I don't just integrate AI; I architect systems that operate autonomously at scale.",
     "My work sits at the intersection of LLM engineering, cloud infrastructure, and real business outcomes. I've shipped production AI across Nigerian oil & gas, healthcare, legal tech, biomedical research, compliance SaaS, and African language AI.",
     "I lead SabiFlow Technologies, serve as CTO at Hanify Solutions (Australia), and pioneered BaobabAI — Africa's first continental multilingual AI model trained on 20 languages.",
   ],
@@ -52,21 +52,29 @@ export const ABOUT = {
     "LlamaIndex",
     "OpenAI SDK",
     "Anthropic SDK",
+    "Gemini API",
     "n8n",
+    "Make.com",
+    "Zapier",
     "FastAPI",
     "Next.js",
     "React",
+    "Node.js",
     "Python",
     "TypeScript",
     "AWS",
     "GCP",
     "Azure",
+    "Google Cloud Run",
     "Docker",
     "Supabase",
     "Pinecone",
     "pgvector",
+    "Weaviate",
     "PostgreSQL",
+    "MySQL",
     "Redis",
+    "Twilio",
     "Unsloth/QLoRA",
   ],
 } as const;
@@ -196,6 +204,24 @@ export const SKILL_QUADRANTS: SkillQuadrant[] = [
       "Tool-Calling",
       "Memory Systems",
       "LLMOps",
+      "Gemini API",
+      "HuggingFace Transformers",
+    ],
+  },
+  {
+    title: "Automation & Integration",
+    items: [
+      "n8n (Certified)",
+      "Make.com",
+      "Zapier",
+      "REST APIs",
+      "Webhook Orchestration",
+      "Paystack",
+      "WhatsApp Business API",
+      "Glovo/Pandago",
+      "Google Sheets API",
+      "Resend",
+      "Twilio",
     ],
   },
   {
@@ -204,6 +230,7 @@ export const SKILL_QUADRANTS: SkillQuadrant[] = [
       "AWS (EC2 · S3 · Fargate · Lightsail)",
       "Azure",
       "GCP",
+      "Google Cloud Run",
       "Docker",
       "Vercel",
       "Railway",
@@ -212,18 +239,6 @@ export const SKILL_QUADRANTS: SkillQuadrant[] = [
       "HuggingFace",
       "CI/CD",
       "Terraform",
-    ],
-  },
-  {
-    title: "Automation & Integration",
-    items: [
-      "n8n (Certified)",
-      "REST APIs",
-      "Webhook Orchestration",
-      "Paystack",
-      "WhatsApp Business API",
-      "Glovo/Pandago",
-      "Google Sheets API",
     ],
   },
   {
@@ -238,6 +253,34 @@ export const SKILL_QUADRANTS: SkillQuadrant[] = [
       "SOC 2",
       "ISO 27001",
       "AI Governance",
+      "HIPAA-aware Infrastructure",
+    ],
+  },
+  {
+    title: "Languages & Frameworks",
+    items: [
+      "Python",
+      "TypeScript",
+      "JavaScript",
+      "SQL",
+      "React",
+      "Next.js",
+      "FastAPI",
+      "Vite",
+      "Node.js",
+    ],
+  },
+  {
+    title: "Databases & Vector Stores",
+    items: [
+      "PostgreSQL",
+      "MongoDB",
+      "MySQL",
+      "Supabase",
+      "Pinecone",
+      "pgvector",
+      "Weaviate",
+      "Redis",
     ],
   },
 ];
@@ -248,7 +291,10 @@ export const LANGUAGES = [
   "JavaScript",
   "SQL",
   "React",
+  "Next.js",
+  "FastAPI",
   "Vite",
+  "Node.js",
 ];
 
 export type Experience = {

@@ -5,12 +5,13 @@ import { Projects } from "@/components/sections/Projects";
 import { Skills } from "@/components/sections/Skills";
 import { Experience } from "@/components/sections/Experience";
 import { Certifications } from "@/components/sections/Certifications";
+import { AITwin } from "@/components/sections/AITwin";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
 
 export default function HomePage() {
   return (
-    <main className="relative min-h-screen overflow-x-hidden">
+    <main className="relative z-10 min-h-screen overflow-x-hidden">
       <Navbar />
       <Hero />
       <About />
@@ -18,6 +19,7 @@ export default function HomePage() {
       <Skills />
       <Experience />
       <Certifications />
+      <AITwin />
       <Contact />
       <Footer />
     </main>

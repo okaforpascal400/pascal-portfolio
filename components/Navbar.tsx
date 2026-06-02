@@ -33,16 +33,16 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-500",
+        "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
         scrolled
-          ? "border-b border-border bg-background/70 backdrop-blur-xl"
+          ? "border-b border-border bg-background/95 backdrop-blur-sm"
           : "border-b border-transparent bg-transparent",
       )}
     >
       <div className="container-page flex h-16 items-center justify-between lg:h-20">
         <Link
           href="#hero"
-          className="font-semibold tracking-tight text-amber transition-colors hover:text-amber-dark"
+          className="text-lg font-bold tracking-tight text-text-primary transition-colors hover:text-text-primary/90 sm:text-xl"
         >
           {SITE.name}
         </Link>
@@ -60,7 +60,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden md:block">
-          <Button href={`mailto:${SITE.email}`} className="px-5 py-2 text-sm">
+          <Button href={`https://mail.google.com/mail/?view=cm&to=${SITE.email}&su=${encodeURIComponent("Hiring Inquiry - Okafor Ogbonna Pascal")}`} className="px-5 py-2 text-sm">
             Hire Me
           </Button>
         </div>
@@ -97,7 +97,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Button
-                href={`mailto:${SITE.email}`}
+                href={`https://mail.google.com/mail/?view=cm&to=${SITE.email}&su=${encodeURIComponent("Hiring Inquiry - Okafor Ogbonna Pascal")}`}
                 className="mt-2 w-full"
                 onClick={() => setMobileOpen(false)}
               >

@@ -14,12 +14,14 @@
 
   body {
     @apply bg-background text-text-primary antialiased;
-    background-image:
-      radial-gradient(
-        ellipse 80% 50% at 50% -20%,
-        rgba(245, 158, 11, 0.05),
-        transparent
-      );
+    font-size: 16.5px;
+    line-height: 1.7;
+  }
+
+  @media (min-width: 1024px) {
+    body {
+      font-size: 17px;
+    }
   }
 
   ::selection {
@@ -53,38 +55,25 @@
     text-wrap: balance;
   }
 
-  .grid-bg {
-    background-image:
-      linear-gradient(rgba(245, 158, 11, 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(245, 158, 11, 0.06) 1px, transparent 1px);
-    background-size: 64px 64px;
+  .dot-grid {
+    background-image: radial-gradient(
+      rgba(139, 139, 158, 0.18) 1px,
+      transparent 1px
+    );
+    background-size: 28px 28px;
   }
 
-  .grid-bg-fade {
+  .dot-grid-fade {
     mask-image: radial-gradient(
-      ellipse 60% 50% at 50% 50%,
-      black 40%,
-      transparent 100%
+      ellipse 70% 60% at 50% 30%,
+      black 30%,
+      transparent 90%
     );
     -webkit-mask-image: radial-gradient(
-      ellipse 60% 50% at 50% 50%,
-      black 40%,
-      transparent 100%
+      ellipse 70% 60% at 50% 30%,
+      black 30%,
+      transparent 90%
     );
-  }
-
-  .noise {
-    position: relative;
-  }
-
-  .noise::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.03;
-    mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
   .text-gradient-amber {
@@ -94,27 +83,14 @@
     -webkit-text-fill-color: transparent;
   }
 
-  .border-gradient {
-    position: relative;
-    background-clip: padding-box;
-  }
-
-  .border-gradient::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 1px;
+  .divider-amber {
+    height: 1px;
+    width: 100%;
     background: linear-gradient(
-      135deg,
-      rgba(245, 158, 11, 0.4),
-      rgba(245, 158, 11, 0)
+      90deg,
+      transparent 0%,
+      rgba(42, 42, 58, 0.9) 50%,
+      transparent 100%
     );
-    -webkit-mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
   }
 }

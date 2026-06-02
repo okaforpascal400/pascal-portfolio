@@ -64,11 +64,12 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative scroll-mt-24 border-t border-border py-24 lg:py-32"
+      className="relative scroll-mt-24 py-28 lg:py-32"
     >
+      <div aria-hidden className="divider-amber absolute inset-x-0 top-0" />
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-radial-glow opacity-50 blur-3xl"
+        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[400px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-amber/[0.04] blur-[120px]"
       />
 
       <div className="container-page">
@@ -131,7 +132,7 @@ export function Contact() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
             onSubmit={onSubmit}
-            className="space-y-4 rounded-2xl border border-border bg-surface p-8 lg:col-span-3"
+            className="space-y-4 rounded-xl border border-border bg-surface p-8 lg:col-span-3"
           >
             <Field label="Name" name="name" type="text" required />
             <Field label="Email" name="email" type="email" required />
@@ -188,8 +189,8 @@ function ContactItem({
   external?: boolean;
 }) {
   const content = (
-    <div className="group flex items-center gap-4 rounded-xl border border-border bg-surface p-5 transition-all duration-300 hover:border-amber/40">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber/10 text-amber ring-1 ring-amber/30">
+    <div className="group flex items-center gap-4 rounded-xl border border-border bg-surface p-5 transition-all duration-300 hover:-translate-y-[3px] hover:border-amber/40">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-elevated text-amber">
         {icon}
       </div>
       <div className="min-w-0">

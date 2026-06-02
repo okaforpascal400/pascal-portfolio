@@ -1,32 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Brain,
-  Cloud,
-  Workflow,
-  ShieldCheck,
-  Code2,
-  type LucideIcon,
-} from "lucide-react";
-import { SKILL_QUADRANTS, LANGUAGES } from "@/lib/data";
+import { SKILL_QUADRANTS } from "@/lib/data";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Tag } from "@/components/ui/Tag";
 import { staggerContainer, staggerItem } from "@/components/FadeIn";
-
-const ICONS: Record<string, LucideIcon> = {
-  "AI & LLM Engineering": Brain,
-  "Cloud & Infrastructure": Cloud,
-  "Automation & Integration": Workflow,
-  "Security & Compliance": ShieldCheck,
-};
 
 export function Skills() {
   return (
     <section
       id="skills"
-      className="relative scroll-mt-24 border-t border-border py-24 lg:py-32"
+      className="relative scroll-mt-24 py-32 lg:py-40"
     >
+      <div aria-hidden className="divider-amber absolute inset-x-0 top-0" />
       <div className="container-page">
         <SectionHeader
           eyebrow="Capabilities"
@@ -39,63 +24,29 @@ export function Skills() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
-          className="grid grid-cols-1 gap-6 md:grid-cols-2"
+          className="space-y-12"
         >
-          {SKILL_QUADRANTS.map((q) => {
-            const Icon = ICONS[q.title] ?? Brain;
-            return (
-              <motion.div
-                key={q.title}
-                variants={staggerItem}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-surface p-8 transition-all duration-500 hover:border-amber/30"
-              >
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-amber/0 blur-3xl transition-all duration-700 group-hover:bg-amber/10"
-                />
-                <div className="relative">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber/10 ring-1 ring-amber/30">
-                      <Icon className="h-5 w-5 text-amber" />
-                    </div>
-                    <h3 className="text-lg font-semibold tracking-tight text-text-primary">
-                      {q.title}
-                    </h3>
-                  </div>
-
-                  <div className="mt-6 flex flex-wrap gap-1.5">
-                    {q.items.map((item) => (
-                      <Tag key={item}>{item}</Tag>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className="mt-8 rounded-2xl border border-border bg-surface p-8"
-        >
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber/10 ring-1 ring-amber/30">
-                <Code2 className="h-5 w-5 text-amber" />
-              </div>
-              <h3 className="text-lg font-semibold tracking-tight text-text-primary">
-                Languages
+          {SKILL_QUADRANTS.map((q) => (
+            <motion.div
+              key={q.title}
+              variants={staggerItem}
+              className="border-l-2 border-amber/60 pl-6"
+            >
+              <h3 className="text-lg font-semibold tracking-tight text-white">
+                {q.title}
               </h3>
-            </div>
-            <div className="flex flex-wrap gap-1.5">
-              {LANGUAGES.map((lang) => (
-                <Tag key={lang}>{lang}</Tag>
-              ))}
-            </div>
-          </div>
+              <div className="mt-5 flex flex-wrap gap-2.5">
+                {q.items.map((item) => (
+                  <span
+                    key={item}
+                    className="inline-flex items-center rounded-md border border-[#2a2a3a] bg-[#1e1e2e] px-4 py-2 text-sm text-[#e5e7eb] transition-colors duration-200 hover:border-amber/50 hover:text-white"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>
