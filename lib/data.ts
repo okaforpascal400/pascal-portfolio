@@ -43,7 +43,7 @@ export const ABOUT = {
   paragraphs: [
     "I'm Okafor Ogbonna Pascal — an Agentic AI Engineer and founder based in Abuja, Nigeria. I don't just integrate AI; I architect systems that operate autonomously at scale.",
     "My work sits at the intersection of LLM engineering, cloud infrastructure, and real business outcomes. I've shipped production AI across Nigerian oil & gas, healthcare, legal tech, biomedical research, compliance SaaS, and African language AI.",
-    "I lead SabiFlow Technologies, serve as CTO at Hanify Solutions (Australia), and pioneered BaobabAI — Africa's first continental multilingual AI model trained on 20 languages.",
+    "I lead SabiFlow Technologies, serve as CTO at Hanify Solutions (Australia), and pioneered BaobabAI — a multilingual AI model for African languages, with v0.5 fine-tuned on Igbo, Hausa, Yoruba, and Nigerian Pidgin.",
   ],
   techTags: [
     "LangChain",
@@ -103,9 +103,16 @@ export const PROJECTS: Project[] = [
     name: "BaobabAI — African Language Model",
     category: "AI Research",
     description:
-      "Africa's first continental multilingual LLM trained on 20 African languages (Hausa, Yoruba, Igbo, Swahili, Amharic +15 more). Built on Meta's Llama 3.2 3B with QLoRA fine-tuning. 221,697 curated training pairs.",
-    stack: ["Unsloth", "QLoRA", "Llama 3.2", "FastAPI", "HuggingFace"],
-    links: [{ label: "Live", href: "https://baobabai.dev" }],
+      "Multilingual LLM fine-tuned for Nigerian languages — Igbo, Hausa, Yoruba, and Nigerian Pidgin (5,000 pairs each). Built on Meta's Llama 3.1 8B with QLoRA fine-tuning. 20,510 curated conversational pairs.",
+    stack: ["Unsloth", "QLoRA", "Llama 3.1 8B", "FastAPI", "Modal", "HuggingFace"],
+    links: [
+      { label: "Chat", href: "https://chat.baobabai.dev" },
+      { label: "Model", href: "https://huggingface.co/okaforpascal40/BaobabAI-v0.5" },
+      {
+        label: "API",
+        href: "https://okaforpascal40--baobabai-api-fastapi-app.modal.run",
+      },
+    ],
     featured: true,
   },
   {
