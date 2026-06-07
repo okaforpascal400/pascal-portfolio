@@ -6,6 +6,7 @@ import { Skills } from "@/components/sections/Skills";
 import { Experience } from "@/components/sections/Experience";
 import { Certifications } from "@/components/sections/Certifications";
 import { AITwin } from "@/components/sections/AITwin";
+import { AgentGovernance } from "@/components/sections/AgentGovernance";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
 
@@ -20,6 +21,7 @@ export default function HomePage() {
       <Experience />
       <Certifications />
       <AITwin />
+      <AgentGovernance />
       <Contact />
       <Footer />
     </main>
