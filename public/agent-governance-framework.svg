@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 480" role="img" aria-labelledby="agf-title agf-desc" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<title id="agf-title">The Agent Governance Framework</title>
+<desc id="agf-desc">Six controls for deploying autonomous AI agents safely: least-privilege, sandboxed execution, audit trails, human-in-the-loop checkpoints, secrets management, and output verification — resolving into agents an enterprise can trust.</desc>
+<style>
+  .agf-title { font-size: 19px; font-weight: 600; }
+  .agf-sub { font-size: 12px; }
+  .agf-pill-title { font-size: 13px; font-weight: 600; }
+  .agf-pill-sub { font-size: 11px; }
+  .agf-group { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; }
+  .agf-close { font-size: 12px; }
+  .agf-tprimary { fill: #1c1c1a; }
+  .agf-tmuted { fill: #5f5e5a; }
+  .agf-tech-fill { fill: #EEEDFE; }
+  .agf-tech-stroke { stroke: #534AB7; }
+  .agf-tech-text { fill: #3C3489; }
+  .agf-tech-sub { fill: #534AB7; }
+  .agf-gov-fill { fill: #E1F5EE; }
+  .agf-gov-stroke { stroke: #0F6E56; }
+  .agf-gov-text { fill: #085041; }
+  .agf-gov-sub { fill: #0F6E56; }
+  .agf-out-fill { fill: #FAECE7; }
+  .agf-out-stroke { stroke: #993C1D; }
+  .agf-out-text { fill: #712B13; }
+  .agf-out-sub { fill: #993C1D; }
+  .agf-arrow { stroke: #888780; }
+  @media (prefers-color-scheme: dark) {
+    .agf-tprimary { fill: #ECEAE0; }
+    .agf-tmuted { fill: #9c9a92; }
+    .agf-tech-fill { fill: #3C3489; }
+    .agf-tech-stroke { stroke: #AFA9EC; }
+    .agf-tech-text { fill: #CECBF6; }
+    .agf-tech-sub { fill: #AFA9EC; }
+    .agf-gov-fill { fill: #085041; }
+    .agf-gov-stroke { stroke: #5DCAA5; }
+    .agf-gov-text { fill: #9FE1CB; }
+    .agf-gov-sub { fill: #5DCAA5; }
+    .agf-out-fill { fill: #4A1B0C; }
+    .agf-out-stroke { stroke: #F0997B; }
+    .agf-out-text { fill: #F5C4B3; }
+    .agf-out-sub { fill: #F0997B; }
+    .agf-arrow { stroke: #5F5E5A; }
+  }
+</style>
+
+<text class="agf-title agf-tprimary" x="340" y="30" text-anchor="middle">The agent governance framework</text>
+<text class="agf-sub agf-tmuted" x="340" y="50" text-anchor="middle">Six controls that make autonomous agents safe to deploy</text>
+
+<text class="agf-group agf-tmuted" x="40" y="78">TECHNICAL CONTROLS</text>
+
+<g>
+<rect class="agf-tech-fill agf-tech-stroke" x="40" y="86" width="190" height="86" rx="8" stroke-width="0.75"/>
+<text class="agf-pill-title agf-tech-text" x="56" y="112">1. Least-privilege</text>
+<text class="agf-pill-sub agf-tech-sub" x="56" y="134">Narrowest scope per agent</text>
+<text class="agf-pill-sub agf-tech-sub" x="56" y="152">Scoped keys, no god-tokens</text>
+</g>
+
+<g>
+<rect class="agf-tech-fill agf-tech-stroke" x="245" y="86" width="190" height="86" rx="8" stroke-width="0.75"/>
+<text class="agf-pill-title agf-tech-text" x="261" y="112">2. Sandboxed run</text>
+<text class="agf-pill-sub agf-tech-sub" x="261" y="134">Hard blast-radius limits</text>
+<text class="agf-pill-sub agf-tech-sub" x="261" y="152">Egress allowlists, caps</text>
+</g>
+
+<g>
+<rect class="agf-tech-fill agf-tech-stroke" x="450" y="86" width="190" height="86" rx="8" stroke-width="0.75"/>
+<text class="agf-pill-title agf-tech-text" x="466" y="112">3. Audit trails</text>
+<text class="agf-pill-sub agf-tech-sub" x="466" y="134">Immutable decision logs</text>
+<text class="agf-pill-sub agf-tech-sub" x="466" y="152">Reconstruct any action</text>
+</g>
+
+<text class="agf-group agf-tmuted" x="40" y="200">GOVERNANCE CONTROLS</text>
+
+<g>
+<rect class="agf-gov-fill agf-gov-stroke" x="40" y="208" width="190" height="86" rx="8" stroke-width="0.75"/>
+<text class="agf-pill-title agf-gov-text" x="56" y="234">4. Human checkpoints</text>
+<text class="agf-pill-sub agf-gov-sub" x="56" y="256">Approval gates on risk</text>
+<text class="agf-pill-sub agf-gov-sub" x="56" y="274">Payments, deletes, sends</text>
+</g>
+
+<g>
+<rect class="agf-gov-fill agf-gov-stroke" x="245" y="208" width="190" height="86" rx="8" stroke-width="0.75"/>
+<text class="agf-pill-title agf-gov-text" x="261" y="234">5. Secrets / BYOK</text>
+<text class="agf-pill-sub agf-gov-sub" x="261" y="256">Keys encrypted, scoped</text>
+<text class="agf-pill-sub agf-gov-sub" x="261" y="274">Never logged, rotatable</text>
+</g>
+
+<g>
+<rect class="agf-gov-fill agf-gov-stroke" x="450" y="208" width="190" height="86" rx="8" stroke-width="0.75"/>
+<text class="agf-pill-title agf-gov-text" x="466" y="234">6. Output verification</text>
+<text class="agf-pill-sub agf-gov-sub" x="466" y="256">Review layer at scale</text>
+<text class="agf-pill-sub agf-gov-sub" x="466" y="274">Policy checks, eval gates</text>
+</g>
+
+<line class="agf-arrow" x1="160" y1="300" x2="160" y2="332" stroke-width="1.5"/>
+<line class="agf-arrow" x1="340" y1="300" x2="340" y2="332" stroke-width="1.5"/>
+<line class="agf-arrow" x1="520" y1="300" x2="520" y2="332" stroke-width="1.5"/>
+<polygon class="agf-arrow" points="156,330 164,330 160,336" fill="#888780"/>
+<polygon class="agf-arrow" points="336,330 344,330 340,336" fill="#888780"/>
+<polygon class="agf-arrow" points="516,330 524,330 520,336" fill="#888780"/>
+
+<g>
+<rect class="agf-out-fill agf-out-stroke" x="140" y="336" width="400" height="66" rx="8" stroke-width="0.75"/>
+<text class="agf-pill-title agf-out-text" x="340" y="364" text-anchor="middle">Agents an enterprise can trust</text>
+<text class="agf-pill-sub agf-out-sub" x="340" y="384" text-anchor="middle">Contained, observable, auditable, governed</text>
+</g>
+
+<text class="agf-close agf-tmuted" x="340" y="432" text-anchor="middle">When building is nearly free, trust is the scarce skill.</text>
+<text class="agf-close agf-tmuted" x="340" y="450" text-anchor="middle">The bottleneck moved from finding to fixing — this is the fixing layer.</text>
+</svg>

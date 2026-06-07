@@ -9,6 +9,7 @@ type SectionHeaderProps = {
   subtitle?: string;
   className?: string;
   align?: "left" | "center";
+  titleAs?: "h1" | "h2";
 };
 
 export function SectionHeader({
@@ -17,7 +18,9 @@ export function SectionHeader({
   subtitle,
   className,
   align = "left",
+  titleAs = "h2",
 }: SectionHeaderProps) {
+  const Heading = titleAs;
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -35,9 +38,9 @@ export function SectionHeader({
           {eyebrow}
         </p>
       )}
-      <h2 className="text-balance text-4xl font-bold tracking-tight text-text-primary sm:text-5xl lg:text-6xl">
+      <Heading className="text-balance text-4xl font-bold tracking-tight text-text-primary sm:text-5xl lg:text-6xl">
         {title}
-      </h2>
+      </Heading>
       {subtitle && (
         <p className="mt-4 text-balance text-base text-text-secondary sm:text-lg">
           {subtitle}
