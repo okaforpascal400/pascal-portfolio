@@ -12,7 +12,7 @@ export const SITE = {
   sabiflow: "https://sabiflow.dev",
   social: {
     linkedin: "https://www.linkedin.com/in/pascal-okafor",
-    github: "https://github.com/okaforpascal40",
+    github: "https://github.com/okaforpascal400",
   },
 } as const;
 
