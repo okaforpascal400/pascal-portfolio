@@ -5,7 +5,7 @@ export const SITE = {
   title: "Okafor Ogbonna Pascal — Agentic AI Engineer & Founder",
   description:
     "Agentic AI Engineer. Founder of SabiFlow Technologies. CTO at Hanify Solutions. Building multi-agent LLM systems, enterprise RAG, and end-to-end AI automation at scale.",
-  url: "https://pascalokafor.dev",
+  url: "https://www.okaforpascal.com",
   email: "okaforpascal40@gmail.com",
   phone: "+234 803 387 8681",
   location: "Abuja, Nigeria",
