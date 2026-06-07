@@ -21,6 +21,7 @@ export const NAV_LINKS = [
   { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
+  { href: "#agent-governance", label: "Framework" },
   { href: "#contact", label: "Contact" },
 ] as const;
 
@@ -387,5 +388,81 @@ export const CERTIFICATIONS: Certification[] = [
   {
     name: "Workflow Automation Certified",
     issuer: "n8n",
+  },
+];
+
+export const AGENT_GOVERNANCE = {
+  eyebrow: "Agent Governance",
+  headline: "Building an agent is easy now. Deploying one safely isn't.",
+  subtitle:
+    "Six controls that make autonomous agents safe to deploy — the line between a demo that impresses and a system an enterprise can actually run.",
+  diagramAlt:
+    "The Agent Governance Framework: six controls for deploying autonomous AI agents safely — least-privilege, sandboxed execution, audit trails, human-in-the-loop checkpoints, secrets management, and output verification.",
+  closing:
+    "When building is nearly free, trust is the scarce skill. This is the layer that provides it.",
+  cta: {
+    href: "https://cal.com/okaforpascal/discovery",
+    label: "Deploying autonomous agents? Let's talk.",
+  },
+} as const;
+
+export type GovernanceGroup = "Technical Controls" | "Governance Controls";
+
+export type GovernancePillar = {
+  number: number;
+  group: GovernanceGroup;
+  title: string;
+  summary: string;
+  description: string;
+};
+
+export const GOVERNANCE_PILLARS: GovernancePillar[] = [
+  {
+    number: 1,
+    group: "Technical Controls",
+    title: "Least-privilege",
+    summary: "Narrowest scope per agent.",
+    description:
+      "Every agent gets only the permissions its task requires — scoped keys, no shared god-tokens. A compromised agent can't reach what it was never granted.",
+  },
+  {
+    number: 2,
+    group: "Technical Controls",
+    title: "Sandboxed execution",
+    summary: "Hard limits on blast radius.",
+    description:
+      "Agents run in isolated environments with egress allowlists and resource caps. When one misbehaves, the damage is contained by design — not by hope.",
+  },
+  {
+    number: 3,
+    group: "Technical Controls",
+    title: "Audit trails for agent-to-agent actions",
+    summary: "Immutable, replayable decision logs.",
+    description:
+      "Every tool call and hand-off is logged immutably, so any autonomous action can be reconstructed after the fact: who did what, why, and on whose behalf.",
+  },
+  {
+    number: 4,
+    group: "Governance Controls",
+    title: "Human-in-the-loop checkpoints",
+    summary: "Approval gates on risky moves.",
+    description:
+      "High-stakes actions — payments, deletions, outbound messages — pause for human sign-off. Autonomy where it's safe, a checkpoint where it isn't.",
+  },
+  {
+    number: 5,
+    group: "Governance Controls",
+    title: "Secrets management for BYOK systems",
+    summary: "Customer keys, encrypted and scoped.",
+    description:
+      "In bring-your-own-key systems, credentials are encrypted at rest, scoped per tenant, never written to logs, and rotatable on demand. Trust that survives an audit.",
+  },
+  {
+    number: 6,
+    group: "Governance Controls",
+    title: "Output verification at scale",
+    summary: "A review layer the volume can't outrun.",
+    description:
+      "Agent output passes policy checks and evaluation gates before it ships — catching hallucinations and violations automatically when human review can't keep pace.",
   },
 ];
