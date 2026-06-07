@@ -177,7 +177,22 @@ function PillarCard({ pillar }: { pillar: GovernancePillar }) {
         {pillar.description}
       </p>
 
-      {/* PROOF POINT: add real Venzip/Alex example here */}
+      {/* Proof point comes from `proofPoint` in lib/data.ts; cards without one
+          render nothing. */}
+      {pillar.proofPoint && (
+        <div className="mt-5 border-t border-border pt-4">
+          <p className="mb-1.5 flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-extra-wide text-amber">
+            <span
+              aria-hidden
+              className="inline-block h-1.5 w-1.5 rounded-full bg-amber"
+            />
+            In production
+          </p>
+          <p className="text-[13px] italic leading-relaxed text-text-secondary">
+            {pillar.proofPoint}
+          </p>
+        </div>
+      )}
     </article>
   );
 }

@@ -414,6 +414,10 @@ export type GovernancePillar = {
   title: string;
   summary: string;
   description: string;
+  // Real, in-production evidence. The card renders this as a distinct "In
+  // production" accent block; the "In production" label is added by the card, so
+  // store only the evidence sentence here. Omit to show nothing.
+  proofPoint?: string;
 };
 
 export const GOVERNANCE_PILLARS: GovernancePillar[] = [
@@ -424,6 +428,8 @@ export const GOVERNANCE_PILLARS: GovernancePillar[] = [
     summary: "Narrowest scope per agent.",
     description:
       "Every agent gets only the permissions its task requires — scoped keys, no shared god-tokens. A compromised agent can't reach what it was never granted.",
+    proofPoint:
+      "Alex, my outbound calling agent, can reach only the calendar and call system — never customer records or billing. A scoped agent can't leak what it can't touch.",
   },
   {
     number: 2,
@@ -432,6 +438,7 @@ export const GOVERNANCE_PILLARS: GovernancePillar[] = [
     summary: "Hard limits on blast radius.",
     description:
       "Agents run in isolated environments with egress allowlists and resource caps. When one misbehaves, the damage is contained by design — not by hope.",
+    // PROOF POINT: add real Venzip/Alex example here (set `proofPoint`)
   },
   {
     number: 3,
@@ -440,6 +447,8 @@ export const GOVERNANCE_PILLARS: GovernancePillar[] = [
     summary: "Immutable, replayable decision logs.",
     description:
       "Every tool call and hand-off is logged immutably, so any autonomous action can be reconstructed after the fact: who did what, why, and on whose behalf.",
+    proofPoint:
+      "Venzip, a compliance OS running with live beta users, records every user action with who, what, and when — so any change can be reconstructed and accounted for.",
   },
   {
     number: 4,
@@ -448,6 +457,8 @@ export const GOVERNANCE_PILLARS: GovernancePillar[] = [
     summary: "Approval gates on risky moves.",
     description:
       "High-stakes actions — payments, deletions, outbound messages — pause for human sign-off. Autonomy where it's safe, a checkpoint where it isn't.",
+    proofPoint:
+      "Alex hands the call to a human the moment a lead asks to speak to a real person — no agent improvising past its remit.",
   },
   {
     number: 5,
@@ -456,6 +467,8 @@ export const GOVERNANCE_PILLARS: GovernancePillar[] = [
     summary: "Customer keys, encrypted and scoped.",
     description:
       "In bring-your-own-key systems, credentials are encrypted at rest, scoped per tenant, never written to logs, and rotatable on demand. Trust that survives an audit.",
+    proofPoint:
+      "Venzip encrypts customer data with per-customer key isolation, so one tenant's credentials can never unlock another's.",
   },
   {
     number: 6,
@@ -464,5 +477,6 @@ export const GOVERNANCE_PILLARS: GovernancePillar[] = [
     summary: "A review layer the volume can't outrun.",
     description:
       "Agent output passes policy checks and evaluation gates before it ships — catching hallucinations and violations automatically when human review can't keep pace.",
+    // PROOF POINT: add real Venzip/Alex example here (set `proofPoint`)
   },
 ];
